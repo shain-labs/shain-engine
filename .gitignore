@@ -1,0 +1,46 @@
+# Anchor / Rust
+.anchor/
+target/
+**/*.rs.bk
+**/*.swp
+Cargo.lock
+
+# Node / TypeScript
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.yarn/
+sdk/dist/
+sdk/coverage/
+
+# Test output
+test-ledger/
+.surfpool/
+coverage/
+.nyc_output/
+
+# Environment
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# Keypairs — never commit real keys
+*.keypair
+*.keypair.json
+!target/deploy/shackle-keypair.json
+
+# IDE
+.vscode/
+.idea/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Misc
+*.log
+tmp/
+dist/
