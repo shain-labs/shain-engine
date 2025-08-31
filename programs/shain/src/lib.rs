@@ -23,4 +23,8 @@ pub mod shain {
     pub fn start_session(ctx: Context<StartSession>) -> Result<()> {
         instructions::start_session::handler(ctx)
     }
+
+    pub fn gated_action(ctx: Context<GatedAction>, tag: u64) -> Result<()> {
+        instructions::gated_action::handler(ctx, tag)
+    }
 }
