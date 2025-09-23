@@ -5,10 +5,14 @@ solana_version = "3.1.13"
 [features]
 resolution = true
 skip-lint = false
+seeds = false
 
 [programs.localnet]
 shain = "2T1Qs7f2hiy1sUQBWC7226xhXvCees97UfeqReRrnE66"
 
+[programs.devnet]
+shain = "2T1Qs7f2hiy1sUQBWC7226xhXvCees97UfeqReRrnE66"
+
 [provider]
-cluster = "localnet"
+cluster = "devnet"
 wallet = "~/.config/solana/id.json"
