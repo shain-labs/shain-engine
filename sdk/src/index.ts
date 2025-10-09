@@ -1,0 +1,1 @@
+export { ShainClient } from "./client";
