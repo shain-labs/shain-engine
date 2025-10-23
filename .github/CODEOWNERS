@@ -1,0 +1,6 @@
+* @shainprotocol/core
+
+/programs/ @shainprotocol/core
+/sdk/ @shainprotocol/core
+/cli/ @shainprotocol/core
+/.github/ @shainprotocol/core
