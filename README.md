@@ -7,7 +7,7 @@ mempool watchers.
 ## Build
 
 ```bash
-git clone https://github.com/shain-labs/shain-engine
+git clone https://github.com/shainprotocol/shain-engine
 cd shain-engine
 anchor build
 ```
