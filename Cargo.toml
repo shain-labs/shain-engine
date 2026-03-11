@@ -1,23 +1,40 @@
 [workspace]
-members = ["programs/*"]
+members = [
+    "programs/*",
+    "cli",
+]
 resolver = "2"
 
 [workspace.package]
-version = "0.2.0"
+version = "0.4.1"
 edition = "2021"
 authors = ["Shain core"]
 license = "MIT"
-repository = "https://github.com/shain-labs/shain-engine"
-homepage = "https://shain.fun"
+repository = "https://github.com/shainprotocol/shain-engine"
+homepage = "https://shain.ch"
 rust-version = "1.78"
 description = "Shain: holder-gated private session engine for Solana"
 
 [workspace.dependencies]
 anchor-lang = "1.0.0"
 anchor-spl = "1.0.0"
+borsh = "1.5"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+thiserror = "1.0"
+tokio = { version = "1.39", features = ["full"] }
+clap = { version = "4.5", features = ["derive", "env"] }
+anyhow = "1.0"
+base58 = "0.2"
+dirs = "5.0"
 
 [profile.release]
 overflow-checks = true
 lto = "fat"
 codegen-units = 1
 opt-level = 3
+
+[profile.release.build-override]
+opt-level = 3
+incremental = false
+codegen-units = 1
