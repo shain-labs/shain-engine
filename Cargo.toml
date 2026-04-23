@@ -10,10 +10,13 @@ version = "0.4.1"
 edition = "2021"
 authors = ["Shain core"]
 license = "MIT"
-repository = "https://github.com/shainprotocol/shain-engine"
-homepage = "https://shain.ch"
+repository = "https://github.com/shain-labs/shain-engine"
+homepage = "https://shain.fun"
+readme = "README.md"
 rust-version = "1.78"
 description = "Shain: holder-gated private session engine for Solana"
+keywords = ["solana", "anchor", "privacy", "session", "web3"]
+categories = ["cryptography", "network-programming"]
 
 [workspace.dependencies]
 anchor-lang = "1.0.0"
