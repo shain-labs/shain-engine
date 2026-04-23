@@ -266,4 +266,6 @@ Released under the [MIT License](./LICENSE).
 - X: @shainfun
 - GitHub: shain-labs/shain-engine
 - Ticker: $SHAIN
+- Token CA (Solana): `AgukN2pGVZ1wdbU6CTHS9gJ3e8hS4N1c82csizAEpump`
+- pump.fun: https://pump.fun/coin/AgukN2pGVZ1wdbU6CTHS9gJ3e8hS4N1c82csizAEpump
 - Program ID (devnet, reserved): `2T1Qs7f2hiy1sUQBWC7226xhXvCees97UfeqReRrnE66`
