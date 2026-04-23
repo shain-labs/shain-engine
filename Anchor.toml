@@ -13,6 +13,22 @@ shain = "2T1Qs7f2hiy1sUQBWC7226xhXvCees97UfeqReRrnE66"
 [programs.devnet]
 shain = "2T1Qs7f2hiy1sUQBWC7226xhXvCees97UfeqReRrnE66"
 
+[programs.mainnet]
+shain = "2T1Qs7f2hiy1sUQBWC7226xhXvCees97UfeqReRrnE66"
+
+[registry]
+url = "https://api.apr.dev"
+
 [provider]
 cluster = "devnet"
 wallet = "~/.config/solana/id.json"
+
+[scripts]
+test = "cargo test --package shain --test test_shain -- --nocapture"
+
+[test]
+startup_wait = 5000
+shutdown_wait = 2000
+
+[test.validator]
+url = "https://api.mainnet-beta.solana.com"
