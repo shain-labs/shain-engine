@@ -46,7 +46,7 @@ when an individual is officially representing the community in public spaces.
 ## Enforcement
 
 Instances of abusive, harassing, or otherwise unacceptable behavior may be
-reported to the community leaders at conduct@shain.ch.
+reported to the community leaders at conduct@shain.fun.
 
 All complaints will be reviewed and investigated promptly and fairly.
 Community leaders are obligated to respect the privacy and security of the

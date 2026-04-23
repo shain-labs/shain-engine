@@ -11,7 +11,7 @@
 ## Reporting a Vulnerability
 
 Do not open public GitHub issues for security problems. Send a report to
-`security@shain.ch` including:
+`security@shain.fun` including:
 
 1. A description of the vulnerability
 2. Steps to reproduce or a proof-of-concept
@@ -37,7 +37,7 @@ In scope:
 
 Out of scope:
 
-- The marketing website (`shain.ch`)
+- The marketing website (`shain.fun`)
 - Third-party integrations that depend on Shain
 - Issues that require physical access to a user's machine
 - Social engineering of the core team

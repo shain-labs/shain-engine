@@ -1,11 +1,11 @@
 blank_issues_enabled: false
 contact_links:
   - name: Documentation
-    url: https://shain.ch/docs
+    url: https://shain.fun/docs
     about: Read the architecture guide and API reference before opening an issue.
   - name: Security disclosure
-    url: https://github.com/shainprotocol/shain-engine/security/policy
+    url: https://github.com/shain-labs/shain-engine/security/policy
     about: Report security vulnerabilities privately — do not open a public issue.
   - name: X
-    url: https://x.com/shainprotocol
+    url: https://x.com/shainfun
     about: Follow for release announcements and status updates.

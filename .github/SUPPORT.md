@@ -2,10 +2,10 @@
 
 Need help with Shain? Start here.
 
-- **Documentation**: https://shain.ch/docs
-- **Issues**: https://github.com/shainprotocol/shain-engine/issues
-- **Discussions**: https://github.com/shainprotocol/shain-engine/discussions
-- **X**: https://x.com/shainprotocol
+- **Documentation**: https://shain.fun/docs
+- **Issues**: https://github.com/shain-labs/shain-engine/issues
+- **Discussions**: https://github.com/shain-labs/shain-engine/discussions
+- **X**: https://x.com/shainfun
 
 For security issues, read [SECURITY.md](../SECURITY.md). Do not open a
 public issue for a security problem.
