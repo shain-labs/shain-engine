@@ -40,6 +40,8 @@
   </a>
 </p>
 
+CA: AgukN2pGVZ1wdbU6CTHS9gJ3e8hS4N1c82csizAEpump
+
 Shain is a holder-gated private session engine for Solana, written in Rust
 on Anchor 1.0. Hold `$SHAIN`, open a 24-hour private session on your wallet,
 and route any downstream on-chain action past mempool watchers — snipers,
