@@ -7,7 +7,7 @@ use crate::info;
 #[derive(ClapArgs, Debug)]
 pub struct Args {
     /// Root URL of the site to cross-check.
-    #[arg(long = "site", default_value = "https://shain.ch")]
+    #[arg(long = "site", default_value = "https://shain.fun")]
     pub site: String,
 
     /// Emit JSON on stdout instead of a human-readable summary.
@@ -36,7 +36,7 @@ pub async fn run(args: Args, ctx: Context) -> Result<()> {
         "surfaces": {
             "well_known": well_known,
             "health": health,
-            "repo_well_known": "https://github.com/shainprotocol/shain-engine/blob/main/README.md",
+            "repo_well_known": "https://github.com/shain-labs/shain-engine/blob/main/README.md",
         },
         "expect": {
             "program_id_matches": "program_id in all four surfaces equals the CLI program id",

@@ -29,8 +29,8 @@
   <a href="https://github.com/shain-labs/shain-engine/stargazers">
     <img src="https://img.shields.io/github/stars/shain-labs/shain-engine?style=flat-square&color=b388ff" alt="stars"/>
   </a>
-  <a href="https://x.com/shainprotocol">
-    <img src="https://img.shields.io/badge/x-@shainprotocol-b388ff?style=flat-square" alt="x"/>
+  <a href="https://x.com/shainfun">
+    <img src="https://img.shields.io/badge/x-@shainfun-b388ff?style=flat-square" alt="x"/>
   </a>
   <a href="https://shain.fun">
     <img src="https://img.shields.io/badge/website-shain.fun-b388ff?style=flat-square" alt="website"/>
@@ -261,7 +261,7 @@ Released under the [MIT License](./LICENSE).
 
 - Website: https://shain.fun
 - Docs: https://shain.fun/docs
-- X: @shainprotocol
+- X: @shainfun
 - GitHub: shain-labs/shain-engine
 - Ticker: $SHAIN
 - Program ID (devnet, reserved): `2T1Qs7f2hiy1sUQBWC7226xhXvCees97UfeqReRrnE66`

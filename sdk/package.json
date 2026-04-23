@@ -33,17 +33,17 @@
   ],
   "author": {
     "name": "Shain core",
-    "url": "https://shain.ch"
+    "url": "https://shain.fun"
   },
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shainprotocol/shain-engine.git",
+    "url": "git+https://github.com/shain-labs/shain-engine.git",
     "directory": "sdk"
   },
-  "homepage": "https://shain.ch",
+  "homepage": "https://shain.fun",
   "bugs": {
-    "url": "https://github.com/shainprotocol/shain-engine/issues"
+    "url": "https://github.com/shain-labs/shain-engine/issues"
   },
   "engines": {
     "node": ">=18.0.0"

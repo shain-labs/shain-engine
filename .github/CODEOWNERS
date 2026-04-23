@@ -1,6 +1,6 @@
-* @shainprotocol/core
+* @shain-labs
 
-/programs/ @shainprotocol/core
-/sdk/ @shainprotocol/core
-/cli/ @shainprotocol/core
-/.github/ @shainprotocol/core
+/programs/ @shain-labs
+/sdk/ @shain-labs
+/cli/ @shain-labs
+/.github/ @shain-labs

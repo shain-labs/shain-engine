@@ -5,7 +5,7 @@ TypeScript client SDK for the Shain on-chain program.
 ## Install
 
 ```bash
-git clone https://github.com/shainprotocol/shain-engine
+git clone https://github.com/shain-labs/shain-engine
 cd shain-engine/sdk
 npm install
 npm run build

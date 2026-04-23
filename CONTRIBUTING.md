@@ -18,7 +18,7 @@ development environment up and how we expect changes to flow into `main`.
 ## Development environment
 
 ```bash
-git clone https://github.com/shainprotocol/shain-engine
+git clone https://github.com/shain-labs/shain-engine
 cd shain-engine
 rustup toolchain install 1.89.0
 solana-install init 3.1.13
