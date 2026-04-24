@@ -1,0 +1,137 @@
+{
+  "address": "2T1Qs7f2hiy1sUQBWC7226xhXvCees97UfeqReRrnE66",
+  "metadata": {
+    "name": "shain",
+    "version": "0.4.1",
+    "spec": "0.1.0",
+    "description": "Holder-gated private session engine for Solana"
+  },
+  "instructions": [
+    {
+      "name": "initialize",
+      "discriminator": [175, 175, 109, 31, 13, 152, 155, 237],
+      "accounts": [
+        { "name": "authority", "writable": true, "signer": true },
+        { "name": "config", "writable": true, "pda": { "seeds": [{ "kind": "const", "value": [115, 104, 97, 105, 110, 95, 99, 111, 110, 102, 105, 103] }] } },
+        { "name": "shain_mint" },
+        { "name": "treasury_authority", "pda": { "seeds": [{ "kind": "const", "value": [115, 104, 97, 105, 110, 95, 116, 114, 101, 97, 115, 117, 114, 121] }] } },
+        { "name": "treasury_ata", "writable": true },
+        { "name": "token_program", "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA" },
+        { "name": "associated_token_program", "address": "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL" },
+        { "name": "system_program", "address": "11111111111111111111111111111111" },
+        { "name": "rent", "address": "SysvarRent111111111111111111111111111111111" }
+      ],
+      "args": [
+        {
+          "name": "params",
+          "type": {
+            "defined": { "name": "InitializeParams" }
+          }
+        }
+      ]
+    },
+    {
+      "name": "start_session",
+      "discriminator": [23, 227, 96, 50, 148, 169, 199, 88],
+      "accounts": [
+        { "name": "user", "writable": true, "signer": true },
+        { "name": "config", "writable": true, "pda": { "seeds": [{ "kind": "const", "value": [115, 104, 97, 105, 110, 95, 99, 111, 110, 102, 105, 103] }] } },
+        { "name": "session", "writable": true, "pda": { "seeds": [{ "kind": "const", "value": [115, 104, 97, 105, 110, 95, 115, 101, 115, 115, 105, 111, 110] }, { "kind": "account", "path": "user" }] } },
+        { "name": "shain_mint" },
+        { "name": "user_token_account", "writable": true },
+        { "name": "treasury_ata", "writable": true },
+        { "name": "token_program", "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA" },
+        { "name": "system_program", "address": "11111111111111111111111111111111" }
+      ],
+      "args": []
+    },
+    {
+      "name": "gated_action",
+      "discriminator": [184, 27, 51, 89, 122, 12, 70, 200],
+      "accounts": [
+        { "name": "user", "signer": true },
+        { "name": "session", "writable": true, "pda": { "seeds": [{ "kind": "const", "value": [115, 104, 97, 105, 110, 95, 115, 101, 115, 115, 105, 111, 110] }, { "kind": "account", "path": "user" }] } }
+      ],
+      "args": [
+        { "name": "tag", "type": "u64" }
+      ]
+    },
+    {
+      "name": "close_session",
+      "discriminator": [121, 10, 4, 88, 159, 117, 234, 178],
+      "accounts": [
+        { "name": "session", "writable": true, "pda": { "seeds": [{ "kind": "const", "value": [115, 104, 97, 105, 110, 95, 115, 101, 115, 115, 105, 111, 110] }, { "kind": "account", "path": "owner" }] } },
+        { "name": "owner", "writable": true }
+      ],
+      "args": []
+    }
+  ],
+  "accounts": [
+    {
+      "name": "ShainConfig",
+      "discriminator": [120, 199, 0, 67, 45, 178, 82, 91]
+    },
+    {
+      "name": "ShainSession",
+      "discriminator": [11, 219, 178, 33, 88, 7, 142, 165]
+    }
+  ],
+  "errors": [
+    { "code": 6000, "name": "InvalidSessionDuration", "msg": "Session duration must be greater than zero." },
+    { "code": 6001, "name": "InvalidSessionFee", "msg": "Session fee must be greater than zero." },
+    { "code": 6002, "name": "InvalidMinHolding", "msg": "Minimum holding must be greater than zero." },
+    { "code": 6003, "name": "MintMismatch", "msg": "Provided mint does not match configured Shain mint." },
+    { "code": 6004, "name": "InsufficientHolding", "msg": "Wallet holding is below the configured minimum." },
+    { "code": 6005, "name": "SessionStillActive", "msg": "Existing session is still within its expiry window." },
+    { "code": 6006, "name": "SessionExpired", "msg": "Session has expired; gated action is not available." },
+    { "code": 6007, "name": "SessionNotExpired", "msg": "Session can only be closed after expiry." },
+    { "code": 6008, "name": "Overflow", "msg": "Arithmetic overflow." },
+    { "code": 6009, "name": "InvalidOwner", "msg": "Caller is not the session owner." },
+    { "code": 6010, "name": "InvalidTreasuryAuthority", "msg": "Treasury authority PDA does not match." }
+  ],
+  "types": [
+    {
+      "name": "InitializeParams",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          { "name": "session_duration", "type": { "option": "i64" } },
+          { "name": "session_fee", "type": { "option": "u64" } },
+          { "name": "min_holding", "type": { "option": "u64" } }
+        ]
+      }
+    },
+    {
+      "name": "ShainConfig",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          { "name": "authority", "type": "pubkey" },
+          { "name": "shain_mint", "type": "pubkey" },
+          { "name": "treasury_ata", "type": "pubkey" },
+          { "name": "session_duration", "type": "i64" },
+          { "name": "session_fee", "type": "u64" },
+          { "name": "min_holding", "type": "u64" },
+          { "name": "total_sessions", "type": "u64" },
+          { "name": "total_fees_collected", "type": "u64" },
+          { "name": "bump", "type": "u8" },
+          { "name": "treasury_bump", "type": "u8" }
+        ]
+      }
+    },
+    {
+      "name": "ShainSession",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          { "name": "owner", "type": "pubkey" },
+          { "name": "started_at", "type": "i64" },
+          { "name": "expires_at", "type": "i64" },
+          { "name": "actions_count", "type": "u64" },
+          { "name": "total_sessions", "type": "u64" },
+          { "name": "bump", "type": "u8" }
+        ]
+      }
+    }
+  ]
+}
